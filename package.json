@@ -1,5 +1,5 @@
 {
-  "name": "react-storybook",
+  "name": "Netflix",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,9 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
-    "eject": "react-scripts eject",
     "cypress:open": "npm run start & wait-on http://localhost:3000 && cypress open",
     "cypress:run": "npm run start & wait-on http://localhost:3000 && cypress run",
+    "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -32,16 +32,6 @@
       "react-app/jest",
       "plugin:cypress/recommended",
       "plugin:storybook/recommended"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
     ]
   },
   "browserslist": {
@@ -59,35 +49,31 @@
   "jest": {
     "collectCoverageFrom": [
       "src/components/**/*.{js,jsx}",
-      "!src/components/**/*.cy.{js,jsx}",
-      "!src/components/**/*.stories.{js,jsx}"
+      "!src/components/**/*.cy.{js,jsx}"
     ],
     "coverageReporters": [
       "lcov"
     ]
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "1.2.25",
-    "@storybook/addon-actions": "^6.5.13",
-    "@storybook/addon-essentials": "^6.5.13",
-    "@storybook/addon-interactions": "^6.5.13",
-    "@storybook/addon-links": "^6.5.13",
+    "@chromatic-com/storybook": "^1.2.25",
+    "@storybook/addon-essentials": "^8.0.4",
+    "@storybook/addon-interactions": "^8.0.4",
+    "@storybook/addon-links": "^8.0.4",
     "@storybook/addon-onboarding": "^8.0.4",
     "@storybook/blocks": "^8.0.4",
-    "@storybook/builder-webpack5": "^6.5.13",
-    "@storybook/html": "^8.0.4",
-    "@storybook/html-vite": "^8.0.4",
-    "@storybook/manager-webpack5": "^6.5.13",
-    "@storybook/node-logger": "^6.5.13",
-    "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.13",
+    "@storybook/preset-create-react-app": "^8.0.4",
+    "@storybook/react": "^8.0.4",
     "@storybook/react-webpack5": "^8.0.4",
     "@storybook/test": "^8.0.4",
-    "@storybook/testing-library": "^0.0.13",
-    "babel-plugin-named-exports-order": "^0.0.2",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.72",
+    "@types/react-dom": "^18.2.22",
     "eslint-plugin-storybook": "^0.8.0",
     "prop-types": "^15.8.1",
     "storybook": "^8.0.4",
-    "webpack": "^5.74.0"
+    "typescript": "^5.4.3",
+    "webpack": "^5.91.0"
   }
 }
